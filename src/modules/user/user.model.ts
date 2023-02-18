@@ -13,6 +13,11 @@ const userSchema = new mongoose.Schema<IUserDoc, IUserModel>(
       required: true,
       trim: true,
     },
+    score: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
     email: {
       type: String,
       required: true,
