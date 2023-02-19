@@ -6,9 +6,12 @@ export interface IUser {
   name: string;
   email: string;
   password: string;
-  score: number;
+  snake_score: number;
   role: string;
   isEmailVerified: boolean;
+  menja_score: number;
+  score: number;
+  color_blast_score: number;
 }
 
 export interface IUserDoc extends IUser, Document {
