@@ -13,6 +13,22 @@ const userSchema = new mongoose.Schema<IUserDoc, IUserModel>(
       required: true,
       trim: true,
     },
+    score: {
+      type: Number,
+      default: 0,
+    },
+    snake_score: {
+      type: Number,
+      default: 0,
+    },
+    menja_score: {
+      type: Number,
+      default: 0,
+    },
+    color_blast_score: {
+      type: Number,
+      default: 0,
+    },
     email: {
       type: String,
       required: true,

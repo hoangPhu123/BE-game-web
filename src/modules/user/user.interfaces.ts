@@ -6,8 +6,12 @@ export interface IUser {
   name: string;
   email: string;
   password: string;
+  snake_score: number;
   role: string;
   isEmailVerified: boolean;
+  menja_score: number;
+  score: number;
+  color_blast_score: number;
 }
 
 export interface IUserDoc extends IUser, Document {
@@ -21,9 +25,19 @@ export interface IUserModel extends Model<IUserDoc> {
 
 export type UpdateUserBody = Partial<IUser>;
 
-export type NewRegisteredUser = Omit<IUser, 'isEmailVerified'>;
+export type NewRegisteredUser = {
+  name: string;
+  email: string;
+  password: string;
+  role: string;
+};
 
-export type NewCreatedUser = Omit<IUser, 'isEmailVerified'>;
+export type NewCreatedUser = {
+  name: string;
+  email: string;
+  password: string;
+  role: string;
+};
 
 export interface IUserWithTokens {
   user: IUserDoc;
